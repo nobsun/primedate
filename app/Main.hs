@@ -9,9 +9,9 @@ main :: IO ()
 main = putStr . unlines . map showGregorian . primeDates . read . head =<< getArgs
 
 primeDates :: Integer -> [Day]
-primeDates n = filter isPrimeDate [jan1 .. addDays yds jan1]
-  where yds = if isLeapYear n then 365 else 364
-        jan1 = fromGregorian n 1 1
+primeDates n = filter isPrimeDate [jan01 .. dec31]
+  where jan01 = fromGregorian n 1 1
+        dec31 = fromGregorian n 12 31
 
 isPrimeDate :: Day -> Bool
 isPrimeDate =  isPrime . read . filter isDigit . showGregorian

@@ -1,5 +1,5 @@
 name:                primedate
-version:             0.1.0.0
+version:             0.1.0.1
 synopsis:            Enumerate prime dates in specified year.
 description:         Please see README.md
 homepage:            http://github.com/nobsun/primedate#readme
